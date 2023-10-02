@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+{% extends 'AppIndumentaria/plantilla.html' %}
+
+{% load static %}
+
+{% block title %} Productos {% endblock  %}
+
+{% block contenido_que_cambia %}
+<section class="projects-section bg-light" id="projects">
+    <div class="container px-4 px-lg-5">
+     
+        {% for p in productos %}
+
+        <div class="row gx-0 justify-content-center">
+            <div class="col-lg-6"><img class="img-fluid" src={{p.imagen}} alt={{p.imagen}} /></div>
+            <div class="col-lg-6 order-lg-first">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-right">
+                            <h4 class="text-white">{{p.titulo}}</h4>
+                            <p class="mb-0 text-white-50">{{p.subtitulo}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         {% endfor %}
+    
+ {% endblock  %}
+
+</div>
+</section>
+
+
+
+
+ <!-- Bootstrap core JS-->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Core theme JS-->
+ <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+ <!-- * *                               SB Forms JS                               * *-->
+ <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+ <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+ <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+ <!-- <script src="{% static '\js\scripts.js' %}"></script> -->

@@ -9,3 +9,5 @@ class Producto(models.Model):
     autor = models.CharField(max_length=50)
     fecha = models.DateTimeField()
     url = models.ImageField()
+    def __str__(self) -> str:
+        return f"{self.titulo} - {self.subtitulo} - {self.cuerpo} - {self.autor} - {self.fecha} "

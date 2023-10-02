@@ -35,7 +35,10 @@
                 </div>
             </div>
         </nav>
-                <!--Carousel-->
+        
+        
+        
+        <!--Carousel-->
 
                 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -58,6 +61,11 @@
                       <span class="visually-hidden">Next</span>
                     </button>
                   </div>
+
+
+                  <h1 class="mb-5 text-md-center">{% block title %}{% endblock %}</h1>
+
+                  {% block contenido_que_cambia %}{% endblock  %}
 
         <!-- Masthead-->
         {% comment %} <header class="masthead">
